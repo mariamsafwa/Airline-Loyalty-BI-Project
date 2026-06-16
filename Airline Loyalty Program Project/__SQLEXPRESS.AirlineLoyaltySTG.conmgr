@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="__SQLEXPRESS.AirlineLoyaltySTG"
+  DTS:DTSID="{D918983A-6FC8-4991-99C3-F1A7B101FDD8}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AirlineLoyaltySTG;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Airline Loyalty Program Project-{D918983A-6FC8-4991-99C3-F1A7B101FDD8}.\SQLEXPRESS.AirlineLoyaltySTG;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

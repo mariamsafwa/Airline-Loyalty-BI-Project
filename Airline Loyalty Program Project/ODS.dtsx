@@ -1,0 +1,2373 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/30/2026 6:37:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-C5J036K"
+  DTS:CreatorName="DESKTOP-C5J036K\ucc"
+  DTS:DTSID="{F43EB317-9ECC-4EF9-A806-136B2D429BFE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="3073"
+  DTS:ObjectName="ODS"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{E67E124C-73B0-4D13-8095-1EAB2F4AE457}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV_Calender]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EF0EAAFD-F7D4-44BC-A9EB-0EFDAFB03EB2}"
+      DTS:ObjectName="CSV_Calender">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3073"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1256"
+          DTS:ConnectionString="E:\NTI\Airline Loyalty Program Project\Data_Set\Calendar.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{FF0F1DDA-4640-4728-A2AC-D1826C641A9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start of Year"
+              DTS:DTSID="{D4A29FAD-5AA2-48F5-997A-71D58F60EF1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start of Quarter"
+              DTS:DTSID="{BDC5779C-4CE5-4461-A4B5-05E6A10F12A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Start of Month"
+              DTS:DTSID="{3E98C1DC-3578-493E-9D0B-94AEAEC680C8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODS_Flight Activity]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8D698008-48C7-47B5-B175-F88C77C57E84}"
+      DTS:ObjectName="ODS_Flight Activity">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3073"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="E:\NTI\Airline Loyalty Program Project\Data_Set\Customer Flight Activity.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loyalty Number"
+              DTS:DTSID="{2FA10BD3-D170-43A5-910C-4D99A2830E11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{E86F0AD3-C76E-42D8-B902-5900537C551C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Month"
+              DTS:DTSID="{D107578C-6B07-41AA-8132-0B8C5780BF7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Flights"
+              DTS:DTSID="{8A977F93-3882-49F8-B762-8432EE8F2A15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Distance"
+              DTS:DTSID="{27FEDC04-FE16-43E3-9919-16FC6574E307}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Points Accumulated"
+              DTS:DTSID="{647857FF-476C-4EB4-9DC6-91F024887784}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Points Redeemed"
+              DTS:DTSID="{1B429E03-EAA7-447B-9E92-2AE05BA39C38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dollar Cost Points Redeemed"
+              DTS:DTSID="{6E873BA9-251B-408B-8059-315E71541BC8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ODS_LoyaltyHistory]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E44A6428-2281-4ECA-B24B-BEFED6E284F0}"
+      DTS:ObjectName="ODS_LoyaltyHistory">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3073"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="E:\NTI\Airline Loyalty Program Project\Data_Set\Customer Loyalty History.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loyalty Number"
+              DTS:DTSID="{36EF0BCF-2D2B-4941-8151-EBB56F76C9F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{1AC1CC40-A3B2-463E-A65B-4EBEC877C3B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Province"
+              DTS:DTSID="{2DE0D73D-8362-46E7-9D8E-37FDE4F95D29}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{65D13918-147D-43A5-B8AA-9AB56E4559A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Postal Code"
+              DTS:DTSID="{9ECEA46B-13A1-4C4B-9A1D-4E91FE001CF2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{D137CAEF-4257-44FB-AFD7-9D956472C666}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Education"
+              DTS:DTSID="{C09A168F-6B7D-408D-ADA4-297B0DB85104}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Salary"
+              DTS:DTSID="{01E26A4F-9C8A-44F8-A7F1-17D55F7B23D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Marital Status"
+              DTS:DTSID="{F9DFC809-DCDB-40BC-ACA7-D3ADDE48A636}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loyalty Card"
+              DTS:DTSID="{DE7E5A1D-A25E-4A84-A2BF-3C8E4EB0B16E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CLV"
+              DTS:DTSID="{7347BD46-2316-471B-92C2-F2E3FD4588C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Enrollment Type"
+              DTS:DTSID="{B4F6FE0B-F20F-4613-9614-D4CDC0656014}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Enrollment Year"
+              DTS:DTSID="{C5EF6F44-1EFF-46DD-A686-2744C209B568}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Enrollment Month"
+              DTS:DTSID="{46B80CE1-2C2E-498C-B01B-1C48034B66FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cancellation Year"
+              DTS:DTSID="{3696E827-AA31-40AA-A92D-15B7BA31229D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cancellation Month"
+              DTS:DTSID="{F6C8E927-6CB8-4D4D-B1E0-7748D0ECD0BC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{406E31D3-65D3-4195-A4F0-5956DFF307CE}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\ODS_Calendar"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{32C62FE5-96ED-4B78-8308-3EE8749F504F}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ODS_Calendar"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\ODS_Calendar\CSV_Calender"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="3073"
+                  name="CSV_Calender"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CSV_Calender]"
+                      connectionManagerRefId="Package.ConnectionManagers[CSV_Calender]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Date]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Year]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Start of Year]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Year]"
+                          name="Start of Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Quarter]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Start of Quarter]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Quarter]"
+                          name="Start of Quarter"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Month]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Start of Month]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Month]"
+                          name="Start of Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          dataType="dbDate"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Start of Year]"
+                          dataType="dbDate"
+                          name="Start of Year" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Start of Quarter]"
+                          dataType="dbDate"
+                          name="Start of Quarter" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].ExternalColumns[Start of Month]"
+                          dataType="dbDate"
+                          name="Start of Month" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1256"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB_Calender"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[ODS_Calendar]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1256</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Connections[OleDbConnection]"
+                      connectionManagerID="{74A0BF43-D961-4971-B74C-49150A58107B}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[__SQLEXPRESS.AirlineLoyaltyODS]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].Columns[Start of Year]"
+                          cachedDataType="dbDate"
+                          cachedName="Start of Year"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[StartOfYear]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Year]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].Columns[Start of Quarter]"
+                          cachedDataType="dbDate"
+                          cachedName="Start of Quarter"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[StartOfQuarter]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Quarter]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].Columns[Start of Month]"
+                          cachedDataType="dbDate"
+                          cachedName="Start of Month"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[StartOfMonth]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Start of Month]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].Columns[Date]"
+                          cachedDataType="dbDate"
+                          cachedName="Date"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[CalDate]"
+                          lineageId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output].Columns[Date]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[ODS_ID]"
+                          dataType="i4"
+                          name="ODS_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[CalDate]"
+                          dataType="dbDate"
+                          name="CalDate" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[StartOfYear]"
+                          dataType="dbDate"
+                          name="StartOfYear" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[StartOfQuarter]"
+                          dataType="dbDate"
+                          name="StartOfQuarter" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[StartOfMonth]"
+                          dataType="dbDate"
+                          name="StartOfMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input].ExternalColumns[ODS_LoadDate]"
+                          dataType="dbTimeStamp"
+                          name="ODS_LoadDate" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\ODS_Calendar.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\ODS_Calendar\OLE DB_Calender.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\ODS_Calendar\CSV_Calender.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\ODS_Flight Activity"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{BCEE054A-F753-498A-AD2A-51DF0455CDA8}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ODS_Flight Activity"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="3073"
+                  name="ODS_Flight Activity"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ODS_Flight Activity]"
+                      connectionManagerRefId="Package.ConnectionManagers[ODS_Flight Activity]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Loyalty Number]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Loyalty Number]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Loyalty Number]"
+                          name="Loyalty Number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Year]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Year]"
+                          name="Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Month]"
+                          dataType="ui1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Month]"
+                          name="Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Total Flights]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Total Flights]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Total Flights]"
+                          name="Total Flights"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Distance]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Distance]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Distance]"
+                          name="Distance"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Points Accumulated]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Points Accumulated]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Points Accumulated]"
+                          name="Points Accumulated"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Points Redeemed]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Points Redeemed]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Points Redeemed]"
+                          name="Points Redeemed"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Dollar Cost Points Redeemed]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Dollar Cost Points Redeemed]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Dollar Cost Points Redeemed]"
+                          name="Dollar Cost Points Redeemed"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Loyalty Number]"
+                          dataType="i4"
+                          name="Loyalty Number" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                          dataType="i2"
+                          name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          dataType="ui1"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Total Flights]"
+                          dataType="i2"
+                          name="Total Flights" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Distance]"
+                          dataType="i4"
+                          name="Distance" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Points Accumulated]"
+                          dataType="i4"
+                          name="Points Accumulated" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Points Redeemed]"
+                          dataType="i4"
+                          name="Points Redeemed" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].ExternalColumns[Dollar Cost Points Redeemed]"
+                          dataType="i4"
+                          name="Dollar Cost Points Redeemed" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB_Flight Activity"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[ODS_CustomerFlightActivity]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1256</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Connections[OleDbConnection]"
+                      connectionManagerID="{74A0BF43-D961-4971-B74C-49150A58107B}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[__SQLEXPRESS.AirlineLoyaltyODS]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Loyalty Number]"
+                          cachedDataType="i4"
+                          cachedName="Loyalty Number"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[LoyaltyNumber]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Loyalty Number]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Year]"
+                          cachedDataType="i2"
+                          cachedName="Year"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[FlightYear]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Year]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Month]"
+                          cachedDataType="ui1"
+                          cachedName="Month"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[FlightMonth]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Month]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Total Flights]"
+                          cachedDataType="i2"
+                          cachedName="Total Flights"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[TotalFlights]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Total Flights]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Distance]"
+                          cachedDataType="i4"
+                          cachedName="Distance"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[DistanceKm]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Distance]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Points Accumulated]"
+                          cachedDataType="i4"
+                          cachedName="Points Accumulated"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[PointsAccumulated]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Points Accumulated]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Points Redeemed]"
+                          cachedDataType="i4"
+                          cachedName="Points Redeemed"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[PointsRedeemed]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Points Redeemed]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].Columns[Dollar Cost Points Redeemed]"
+                          cachedDataType="i4"
+                          cachedName="Dollar Cost Points Redeemed"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[DollarCostPointsRedeemed]"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output].Columns[Dollar Cost Points Redeemed]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[ODS_ID]"
+                          dataType="i4"
+                          name="ODS_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[LoyaltyNumber]"
+                          dataType="i4"
+                          name="LoyaltyNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[FlightYear]"
+                          dataType="i2"
+                          name="FlightYear" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[FlightMonth]"
+                          dataType="ui1"
+                          name="FlightMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[TotalFlights]"
+                          dataType="i2"
+                          name="TotalFlights" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[DistanceKm]"
+                          dataType="i4"
+                          name="DistanceKm" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[PointsAccumulated]"
+                          dataType="i4"
+                          name="PointsAccumulated" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[PointsRedeemed]"
+                          dataType="i4"
+                          name="PointsRedeemed" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[DollarCostPointsRedeemed]"
+                          dataType="numeric"
+                          name="DollarCostPointsRedeemed"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input].ExternalColumns[ODS_LoadDate]"
+                          dataType="dbTimeStamp"
+                          name="ODS_LoadDate" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\ODS_Flight Activity.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\ODS_LoyaltyHistory"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{85702E94-413F-4A28-A5B9-D8D02230A3C8}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ODS_LoyaltyHistory"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Inputs[Derived Column Input].Columns[Cancellation Year]"
+                          cachedDataType="r4"
+                          cachedName="Cancellation Year"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Year]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Inputs[Derived Column Input].Columns[Cancellation Month]"
+                          cachedDataType="r4"
+                          cachedName="Cancellation Month"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Month]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output].Columns[CancellationYear_Clean]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output].Columns[CancellationYear_Clean]"
+                          name="CancellationYear_Clean"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_I2)#{Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Year]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_I2)[Cancellation Year]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output].Columns[CancellationMonth_Clean]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output].Columns[CancellationMonth_Clean]"
+                          name="CancellationMonth_Clean"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_I2)#{Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Month]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_I2)[Cancellation Month]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="3073"
+                  name="ODS_LoyaltyHistory"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[ODS_LoyaltyHistory]"
+                      connectionManagerRefId="Package.ConnectionManagers[ODS_LoyaltyHistory]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Loyalty Number]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Loyalty Number]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Loyalty Number]"
+                          name="Loyalty Number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Country]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          length="50"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Country]"
+                          name="Country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Province]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Province]"
+                          length="100"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Province]"
+                          name="Province"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[City]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          length="100"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[City]"
+                          name="City"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Postal Code]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                          length="20"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Postal Code]"
+                          name="Postal Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Gender]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                          length="10"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Gender]"
+                          name="Gender"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Education]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Education]"
+                          length="50"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Education]"
+                          name="Education"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Salary]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Salary]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Salary]"
+                          name="Salary"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Marital Status]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Marital Status]"
+                          length="20"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Marital Status]"
+                          name="Marital Status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Loyalty Card]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Loyalty Card]"
+                          length="20"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Loyalty Card]"
+                          name="Loyalty Card"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[CLV]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[CLV]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[CLV]"
+                          name="CLV"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Type]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Enrollment Type]"
+                          length="30"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Type]"
+                          name="Enrollment Type"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Year]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Enrollment Year]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Year]"
+                          name="Enrollment Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Month]"
+                          dataType="ui1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Enrollment Month]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Month]"
+                          name="Enrollment Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Year]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Cancellation Year]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Year]"
+                          name="Cancellation Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Month]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Cancellation Month]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Cancellation Month]"
+                          name="Cancellation Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Loyalty Number]"
+                          dataType="i4"
+                          name="Loyalty Number" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="50"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Province]"
+                          dataType="wstr"
+                          length="100"
+                          name="Province" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[City]"
+                          dataType="wstr"
+                          length="100"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
+                          dataType="wstr"
+                          length="20"
+                          name="Postal Code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Gender]"
+                          dataType="wstr"
+                          length="10"
+                          name="Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Education]"
+                          dataType="wstr"
+                          length="50"
+                          name="Education" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Salary]"
+                          dataType="r8"
+                          name="Salary" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Marital Status]"
+                          dataType="wstr"
+                          length="20"
+                          name="Marital Status" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Loyalty Card]"
+                          dataType="wstr"
+                          length="20"
+                          name="Loyalty Card" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[CLV]"
+                          dataType="r8"
+                          name="CLV" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Enrollment Type]"
+                          dataType="wstr"
+                          length="30"
+                          name="Enrollment Type" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Enrollment Year]"
+                          dataType="i2"
+                          name="Enrollment Year" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Enrollment Month]"
+                          dataType="ui1"
+                          name="Enrollment Month" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Cancellation Year]"
+                          dataType="r4"
+                          name="Cancellation Year" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].ExternalColumns[Cancellation Month]"
+                          dataType="r4"
+                          name="Cancellation Month" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB_LoyaltyHistory"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[ODS_CustomerLoyaltyHistory]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1256</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Connections[OleDbConnection]"
+                      connectionManagerID="{74A0BF43-D961-4971-B74C-49150A58107B}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[__SQLEXPRESS.AirlineLoyaltyODS]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Country]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Country"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Country]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Province]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Province"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Province]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Province]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[City]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="City"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[City]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Gender]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Gender"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Gender]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Education]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Education"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Education]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Education]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Salary]"
+                          cachedDataType="r8"
+                          cachedName="Salary"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Salary]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Salary]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[CLV]"
+                          cachedDataType="r8"
+                          cachedName="CLV"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[CLV]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[CLV]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Loyalty Number]"
+                          cachedDataType="i4"
+                          cachedName="Loyalty Number"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[LoyaltyNumber]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Loyalty Number]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Postal Code]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Postal Code"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Postal Code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Marital Status]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Marital Status"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[MaritalStatus]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Marital Status]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Loyalty Card]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Loyalty Card"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[LoyaltyCard]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Loyalty Card]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Enrollment Type]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Enrollment Type"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[EnrollmentType]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Type]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Enrollment Year]"
+                          cachedDataType="i2"
+                          cachedName="Enrollment Year"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[EnrollmentYear]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Year]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[Enrollment Month]"
+                          cachedDataType="ui1"
+                          cachedName="Enrollment Month"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[EnrollmentMonth]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output].Columns[Enrollment Month]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[CancellationYear_Clean]"
+                          cachedDataType="i2"
+                          cachedName="CancellationYear_Clean"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[CancellationYear]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output].Columns[CancellationYear_Clean]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].Columns[CancellationMonth_Clean]"
+                          cachedDataType="i2"
+                          cachedName="CancellationMonth_Clean"
+                          externalMetadataColumnId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[CancellationMonth]"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output].Columns[CancellationMonth_Clean]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[ODS_ID]"
+                          dataType="i4"
+                          name="ODS_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[LoyaltyNumber]"
+                          dataType="i4"
+                          name="LoyaltyNumber" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="50"
+                          name="Country" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Province]"
+                          dataType="wstr"
+                          length="100"
+                          name="Province" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                          dataType="wstr"
+                          length="100"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                          dataType="wstr"
+                          length="20"
+                          name="PostalCode" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                          dataType="wstr"
+                          length="10"
+                          name="Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Education]"
+                          dataType="wstr"
+                          length="50"
+                          name="Education" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[Salary]"
+                          dataType="numeric"
+                          name="Salary"
+                          precision="12"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[MaritalStatus]"
+                          dataType="wstr"
+                          length="20"
+                          name="MaritalStatus" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[LoyaltyCard]"
+                          dataType="wstr"
+                          length="20"
+                          name="LoyaltyCard" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[CLV]"
+                          dataType="numeric"
+                          name="CLV"
+                          precision="12"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[EnrollmentType]"
+                          dataType="wstr"
+                          length="30"
+                          name="EnrollmentType" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[EnrollmentYear]"
+                          dataType="i2"
+                          name="EnrollmentYear" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[EnrollmentMonth]"
+                          dataType="ui1"
+                          name="EnrollmentMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[CancellationYear]"
+                          dataType="i2"
+                          name="CancellationYear" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[CancellationMonth]"
+                          dataType="ui1"
+                          name="CancellationMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input].ExternalColumns[ODS_LoadDate]"
+                          dataType="dbTimeStamp"
+                          name="ODS_LoadDate" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\ODS_LoyaltyHistory.Paths[Derived Column Output]"
+                  endId="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Sequence Container\ODS_LoyaltyHistory.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column.Inputs[Derived Column Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{70771005-5371-4C86-A16B-8C0E917D0099}"
+          DTS:From="Package\Sequence Container\ODS_Calendar"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container\ODS_LoyaltyHistory" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{2D42D132-D508-495B-9F36-57F7E8871482}"
+          DTS:From="Package\Sequence Container\ODS_LoyaltyHistory"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Sequence Container\ODS_Flight Activity" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Sequence Container\ODS_Calendar"
+          TopLeft="36.942857722178,3.17647037508164" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Sequence Container\ODS_Flight Activity"
+          TopLeft="58.8000005321844,153.388235107776" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Sequence Container\ODS_LoyaltyHistory"
+          TopLeft="43.0857147844471,69.2705881226847" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="110.142857722178,44.7764703750816">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.5428570622691,24.4941177476031"
+              Start="0,0"
+              End="18.5428570622691,16.9941177476031">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.24705887380154" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.24705887380154"
+                    Point2="0,12.2470588738015"
+                    Point3="4,12.2470588738015" />
+                  <mssgle:LineSegment
+                    End="14.5428570622691,12.2470588738015" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5428570622691,12.2470588738015"
+                    Point2="18.5428570622691,12.2470588738015"
+                    Point3="18.5428570622691,16.2470588738015" />
+                  <mssgle:LineSegment
+                    End="18.5428570622691,16.9941177476031" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="128.685714784447,110.870588122685">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.1142857477373,42.5176469850911"
+              Start="0,0"
+              End="14.1142857477373,35.0176469850911">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.2588234925455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.2588234925455"
+                    Point2="0,21.2588234925455"
+                    Point3="4,21.2588234925455" />
+                  <mssgle:LineSegment
+                    End="10.1142857477373,21.2588234925455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.1142857477373,21.2588234925455"
+                    Point2="14.1142857477373,21.2588234925455"
+                    Point3="14.1142857477373,25.2588234925455" />
+                  <mssgle:LineSegment
+                    End="14.1142857477373,35.0176469850911" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="302.4,249.6"
+          Size="302.4,292.8"
+          Id="Package\Sequence Container"
+          TopLeft="191.428571836073,16.0588235153356" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sequence Container\ODS_Calendar">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Sequence Container\ODS_Calendar\OLE DB_Calender"
+          TopLeft="373.571429366664,108.588235198936" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Sequence Container\ODS_Calendar\CSV_Calender"
+          TopLeft="122.857143118673,103.99999990884" />
+        <EdgeLayout
+          Id="Package\Sequence Container\ODS_Calendar.Paths[Flat File Source Output]"
+          TopLeft="266.857143118673,127.094117553888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.714286247991,0"
+              Start="0,0"
+              End="99.2142862479907,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="99.2142862479907,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\ODS_Calendar\OLE DB_Calender">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sequence Container\ODS_Flight Activity">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Sequence Container\ODS_Flight Activity\ODS_Flight Activity"
+          TopLeft="176.999997362494,89.9999986588955" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity"
+          TopLeft="510.999992385507,99.9999985098839" />
+        <EdgeLayout
+          Id="Package\Sequence Container\ODS_Flight Activity.Paths[Flat File Source Output]"
+          TopLeft="344.999997362494,110.799998658896">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.999995023012,9.99999985098837"
+              Start="0,0"
+              End="158.499995023012,9.99999985098837">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="78.9999975115062,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="78.9999975115062,0"
+                    Point2="82.9999975115062,0"
+                    Point3="82.9999975115062,4" />
+                  <mssgle:LineSegment
+                    End="82.9999975115062,5.99999985098837" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.9999975115062,5.99999985098837"
+                    Point2="82.9999975115062,9.99999985098837"
+                    Point3="86.9999975115062,9.99999985098837" />
+                  <mssgle:LineSegment
+                    End="158.499995023012,9.99999985098837" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\ODS_Flight Activity\OLE DB_Flight Activity">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sequence Container\ODS_LoyaltyHistory">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory"
+          TopLeft="512.999992355705,92.9999986141921" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Sequence Container\ODS_LoyaltyHistory\ODS_LoyaltyHistory"
+          TopLeft="114.999998286366,90.9999986439943" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Sequence Container\ODS_LoyaltyHistory\Derived Column"
+          TopLeft="312.999995335937,177.999997347593" />
+        <EdgeLayout
+          Id="Package\Sequence Container\ODS_LoyaltyHistory.Paths[Flat File Source Output]"
+          TopLeft="200.599998286366,132.599998643994">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.79999704957,45.399998703599"
+              Start="0,0"
+              End="188.79999704957,37.899998703599">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6999993517995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6999993517995"
+                    Point2="0,22.6999993517995"
+                    Point3="4,22.6999993517995" />
+                  <mssgle:LineSegment
+                    End="184.79999704957,22.6999993517995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.79999704957,22.6999993517995"
+                    Point2="188.79999704957,22.6999993517995"
+                    Point3="188.79999704957,26.6999993517995" />
+                  <mssgle:LineSegment
+                    End="188.79999704957,37.899998703599" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\ODS_LoyaltyHistory.Paths[Derived Column Output]"
+          TopLeft="413.53332866927,177.999997347593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="192.666663686435,-43.3999987334012"
+              Start="0,0"
+              End="192.666663686435,-35.8999987334012">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-13.6298440450708" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-13.6298440450708"
+                    Point2="0,-17.6298440450708"
+                    Point3="4,-17.6298440450708" />
+                  <mssgle:LineSegment
+                    End="188.666663686435,-17.6298440450708" />
+                  <mssgle:CubicBezierSegment
+                    Point1="188.666663686435,-17.6298440450708"
+                    Point2="192.666663686435,-17.6298440450708"
+                    Point3="192.666663686435,-21.6298440450708" />
+                  <mssgle:LineSegment
+                    End="192.666663686435,-35.8999987334012" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\ODS_LoyaltyHistory\OLE DB_LoyaltyHistory">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
